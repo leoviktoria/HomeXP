@@ -1,5 +1,5 @@
 <?php
-
+//print_r($_SERVER);
 $_controller = 'pages';
 $_action = 'index';
 
@@ -11,9 +11,9 @@ if ( $_GET ){
         $_action = strtolower($_GET['action']);
     }
 }
-include('config.php');
+include(__DIR__.DIRECTORY_SEPARATOR.'config.php');
 
-include ('helpers/menu.helper.php');
+include (__DIR__.DIRECTORY_SEPARATOR.'helpers/menu.helper.php');
 
 //$menu = getMenu();
 //print_r($menu); die;
@@ -33,6 +33,8 @@ call_user_func($_action,$_GET);
     die('Error');
 }
 
-include ('templates/index.ctp');
+include (__DIR__.DIRECTORY_SEPARATOR.'templates/index.php');
 //echo $site_name;
+
+
 

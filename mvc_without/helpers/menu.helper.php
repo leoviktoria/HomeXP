@@ -58,7 +58,7 @@ function getMenu()
 * Открыть буферизацию вывода
 */
     ob_start();
-    include(TEMPLATES_PATH.'/helpers/menu.ctp');
+    include(TEMPLATES_PATH.'/helpers/menu.php');
     $html = ob_get_clean();
 
     return $html;
